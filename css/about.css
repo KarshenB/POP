@@ -1,0 +1,179 @@
+.begin h1 {
+  height: 15vh;
+  line-height: 200px;
+  font-weight: 600;
+  color: #999;
+  width: 100%;
+  text-align: center;
+  font-family: Segoe UI;
+  font-size: 50px;
+  color: #050505;
+  white-space: nowrap;
+}
+
+.begin p {
+  line-height: 70px;
+  color: #999;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: Segoe UI;
+  font-size: 30px;
+  color: #242424;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.about-container {
+  justify-content: space-evenly; /* Distributes space between elements */
+  display: flex; /* Enables flexbox layout */
+  line-height: 100px;
+}
+
+.about-content {
+  position: relative;
+  background-color: #fcfcfc;
+  height: 535px;
+  padding: 2em;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 1000px; /* Keep this width for the container */
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 4px 4px 4px rgba(102, 101, 101, 0.356);
+}
+
+.about-content p {
+  text-align: left;
+  padding: 1em;
+  top: 70px;
+  font-size: 20px;
+  line-height: 1.5em;
+  width: 100%; 
+  box-sizing: border-box;
+  word-wrap: break-word; 
+  white-space: normal;
+}
+
+.typewriter h1 {
+  position: absolute;
+  font-size: 4em;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  left: 50px;
+  top: 50px;
+}
+
+/* Typewriter container styling */
+.typewriter .hybrid {
+  margin: 0;
+  position: absolute;
+  width: auto;
+}
+
+.typewriter .hybrid span {
+  color: #050505;
+}
+
+/* Insert cursor and blink effect */
+.typewriter .hybrid span::after {
+  align-self: center;
+  content: '|';
+  transition: .05s;
+  color: rgb(235, 162, 4);
+  font-family: Arial, Helvetica, sans-serif;
+  animation: blink 1.5s infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+
+
+/* Style for the image button */
+.about-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+}
+
+.about-button img {
+  width: 450px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(102, 101, 101, 0.356);
+  transition: transform 0.3s ease;
+}
+
+.about-button img:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the gif container */
+.gif-container {
+  position: fixed; /* Fix position to keep it on screen */
+  bottom: -45px; /* Align with the bottom of the viewport */
+  z-index: 2;
+  left: -500px; /* Start off-screen to the left */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 3s ease; /* Smooth transition for visibility */
+}
+
+
+/* Style for the animated GIF */
+#animated-gif {
+  width: 600px;
+  height: auto;
+}
+
+/* Keyframes for the walking animation */
+@keyframes walk {
+  0% {
+    left: -500px; /* Start off-screen */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    left: calc(100% - 50px); /* Move to the right edge */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Trigger the animation */
+.gif-active {
+  animation: walk 10s linear forwards; /* Moves the GIF */
+  opacity: 1; /* Make the GIF visible initially */
+}
+
+
+
+
+.game-container {
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly; 
+  display: flex; 
+  flex-direction: column;
+}
+
+.game-container h1 {
+margin-bottom: 3vh;
+}
+
+
+.music {
+  height: 100vh;
+  }

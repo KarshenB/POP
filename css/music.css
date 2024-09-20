@@ -1,0 +1,227 @@
+.music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; /* Ensure it's centered horizontally */
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    .song-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+    height: 60px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .song-container:hover {
+    transform: scale(1.1);
+    background-color: #c7c7c7;
+    }
+    
+    .song-container.active {
+    transform: scale(1.2);
+    background-color: #ce9d02;
+    
+    }
+    
+    .btn.inactive {
+    background-color: #cccccc; 
+    border: 3.5px solid #a1a1a1;
+    cursor: not-allowed; 
+    }
+    
+    
+    .song-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .song-info p {
+   font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .song-info h3 {
+            font-family: Arial, Helvetica, sans-serif;
+ font-size:25px;
+ font-weight: 700;
+            }
+    .song-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    }
+    .record-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    }
+    .player {
+        background-color: #06217c;
+        width: 660px; /* Doubled from 330px */
+        height: 380px; /* Doubled from 190px */
+        position: relative;
+        margin-left: 60px; /* Doubled from 30px */
+        border-radius: 16px; /* Doubled from 8px */
+        box-shadow: 0 16px 0 0 #090453; /* Doubled from 8px */
+    }
+    
+    .record {
+        height: 350px; /* Doubled from 175px */
+        width: 350px; /* Doubled from 175px */
+        background-color: #181312;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px; /* Doubled from 10px */
+        left: 40px; /* Doubled from 20px */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .record:before,
+    .record:after {
+        position: absolute;
+        content: "";
+        border: 10px solid transparent; /* Doubled from 5px */
+        border-top-color: #2c2424;
+        border-bottom-color: #2c2424;
+        border-radius: 50%;
+    }
+    
+    .record:before {
+        height: 270px; /* Doubled from 135px */
+        width: 270px; /* Doubled from 135px */
+    }
+    
+    .record:after {
+        height: 190px; /* Doubled from 95px */
+        width: 190px; /* Doubled from 95px */
+    }
+    
+    .label {
+        background-color: #181312;
+        height: 30px; /* Doubled from 15px */
+        width: 30px; /* Doubled from 15px */
+        border: 40px solid #ffae00; /* Doubled from 20px */
+        border-radius: 50%;
+    }
+    
+    .tone-arm {
+        height: 180px; /* Doubled from 90px */
+        width: 12px; /* Doubled from 6px */
+        background-color: #ffffff;
+        position: absolute;
+        top: 50px; /* Doubled from 25px */
+        right: 190px; /* Doubled from 95px */
+        transition: 1s;
+        transform-origin: top;
+    }
+    
+    .tone-arm:before {
+        content: "";
+        height: 80px; /* Doubled from 40px */
+        width: 12px; /* Doubled from 6px */
+        background-color: #ffffff;
+        position: absolute;
+        transform: rotate(30deg);
+        bottom: -72px; /* Doubled from -36px */
+        right: 20px; /* Doubled from 10px */
+    }
+    
+    .tone-arm:after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 20px; /* Doubled from 10px */
+        border-top: 36px solid #b2aea6; /* Doubled from 18px */
+        border-left: 4px solid transparent; /* Doubled from 2px */
+        border-right: 4px solid transparent; /* Doubled from 2px */
+        top: 216px; /* Doubled from 108px */
+        right: 25px; /* Doubled from 12.5px */
+        transform: rotate(30deg);
+    }
+    
+    .control {
+        background-color: rgb(0, 0, 0);
+        height: 34px;
+        width: 34px;
+        border: 10px solid #2c2c2c;
+        border-radius: 50%;
+        position: absolute;
+        top: -16px;
+        left: -21px;
+    }
+
+    .btn {
+        height: 56px; /* Doubled from 28px */
+        width: 56px; /* Doubled from 28px */
+        background-color: #ffae00;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 40px; /* Doubled from 20px */
+        right: 60px; /* Doubled from 30px */
+        border: none;
+        border: 7px solid #c28606; /* Doubled from 3.5px */
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .volume {
+        -webkit-appearance: none;
+        appearance: none;
+        transform: rotate(-90deg);
+        width: 180px; /* Doubled from 90px */
+        height: 14px; /* Doubled from 7px */
+        position: absolute;
+        left: 466px; /* Doubled from 233px */
+        top: 120px; /* Doubled from 60px */
+        outline: none;
+        border-radius: 6px; /* Doubled from 3px */
+        border: 12px solid #ffae00; /* Doubled from 6px */
+    }
+    
+    .volume::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px; /* Doubled from 10px */
+        height: 24px; /* Doubled from 12px */
+        background-color: #797979;
+        cursor: pointer;
+    }
+    
+    .play {
+        transform: rotate(30deg);
+        transform-origin: top;
+        transition: 1s;
+    }
+    
+    .on {
+        animation: spin 6s 1s linear infinite; /* Doubled from 3s */
+    }
+    
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    

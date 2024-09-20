@@ -1,0 +1,181 @@
+.gallery {
+    width: calc(100% - 10px); /* Full width minus smaller side margins */
+    max-width: 1300px; /* Optional max-width for larger screens */
+    padding: 50px 0; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the gallery */
+}
+
+/* Tab Styles */
+.tab-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 2px 15px;
+    background-color: #242F4B;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ce9d02;
+    color: black;
+
+}
+
+.tab.active {
+    background-color: #ce9d02;
+    color: black;
+
+}
+
+/* Image Gallery Styles */
+.image-container {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.image-container.active {
+    display: flex;
+}
+
+.project {
+    position: relative;
+    width: calc(20% - 10px); /* Adjusted for six columns */
+    margin-bottom: -12px; /* Space below each project */
+}
+
+.project img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    object-fit: cover; /* Ensure images cover the area properly */
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* Viewer styles */
+.viewer-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.wrap {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.carousel-container {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.caption-container {
+    width: 30%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-weight: lighter;
+    transform: translateY(-50%);
+user-select: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    padding: 0; /* Remove padding to maintain circle shape */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    text-align: center; /* Ensure text is centered */
+    cursor: pointer;
+}
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 12vh;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}

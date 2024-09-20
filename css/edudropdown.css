@@ -1,0 +1,104 @@
+.collapsible {
+  max-width: 100em;
+  overflow: visible; /* Ensure hover effect is not clipped */
+  padding: 10px;
+  position: relative; /* Ensure hover effect is not clipped */
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.collapsible input {
+  display: none;
+}
+
+.collapsible label {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  transition: transform 0.5s ease;
+  gap: 10px;
+  font-weight: 700;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 8px 50px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(102, 101, 101, 0.356);
+  user-select: none;
+  z-index: 1;
+}
+
+.collapsible label:hover {
+  transform: scale(1.05); /* Slight scale to avoid cutting off */
+  z-index: 2; /* Ensure it stays on top */
+}
+
+.collapsible .icon {
+  width: 100px;
+  height: 100px;
+  margin-left: -40px;
+}
+
+.collapsible label:after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(../Img/icons/arrow.svg) no-repeat center center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+.collapsible input:checked + label:after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.collapsible-text {
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(102, 101, 101, 0.356);
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(10px); /* Initial slide up effect */
+  transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.5s ease; /* Smooth slide and fade effect */
+}
+
+.collapsible input:checked ~ .collapsible-text {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0); /* Slide content back to its normal position */
+
+  background: #fff;
+}
+
+.collapsible-text h2 {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 4px 10px;
+  color: #1c1c6b;
+  font-size: 20px;
+  user-select: none;
+}
+
+.collapsible-text ul {
+  list-style: disc;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1c1c6b;
+  padding-bottom: 10px;
+}
+
+.collapsible-text li {
+  margin-bottom: 4px;
+  margin-left: 10px;
+}

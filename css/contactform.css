@@ -1,0 +1,199 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgb(255, 178, 11);
+    border-top: 1px solid #ccc;
+    
+}
+
+footer {
+    width: 100%;
+    height: 520px;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* Adjust as needed to cover the right side */
+    height: 100%;
+    background-image: url('footer.jpg'); /* Update the path to your image */
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    z-index: -1; /* Places the image behind the content */
+}
+
+
+
+
+.contacts-container {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    transition: 0.3s ease;
+
+
+    
+}
+
+.contacts-container:hover {
+    background-color: #e0e0e0;
+}
+
+.contacts-container h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 15px; /* Space between social icon containers */
+    margin-top: 30px;
+    margin-left: 90px;
+    
+}
+
+
+.contacts h2 {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'comic sans ms';
+    width: 100%; /* Make the h2 take full width of its container */
+    padding: 4px; /* Optional padding for spacing */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.contact-icons-container {
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: stretch; /* Make each item stretch to the full width */
+    gap: 5px; /* Space between each social icon container */
+}
+
+.contact-icon-wrapper {
+    display: flex;
+    
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 600px; /* Adjust as necessary */
+    align-items: center; /* Align items vertically */
+    padding-left: 0; /* Remove any default padding on the left */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    flex: 1; /* Allow each wrapper to grow equally */
+    min-height: 30px; /* Optional: Set a minimum height for uniformity */
+}
+
+.contact-icon-wrapper span {
+margin-left: 15px;
+
+}
+
+.contact-icon-wrapper:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.contact-icon {
+
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between icon and label */
+    text-decoration: none; /* Remove underline from links */
+    color: #000000; /* Text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-icon img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+.contact-form {
+    width: 645px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.322); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-right: 10%;
+    margin: 1.5%;
+    position: relative; /* Ensures backdrop-filter applies correctly */
+    backdrop-filter: blur(5px); /* Apply blur effect to the background */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00116e;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+textarea {
+    resize: none;
+    width: 300px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+
+  }
+
+  .contact-form button {
+    padding: 10px 50px;
+    background-color: #141c3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+
+
+
+.contact-form button:hover {
+    background-color:  rgb(255, 178, 11);
+}
+
+.footer .contacts-container {
+    border-right: 2px solid #ddd;
+}
+
+.popfoot {
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    background-color: gray; /* Change to your desired gray shade */
+    z-index: 12;
+}

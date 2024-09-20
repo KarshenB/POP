@@ -1,0 +1,108 @@
+.dropdown {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dropdown-btn {
+  background-color: #141c3a;
+  color: white;
+  padding: 30px;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-content {
+  max-height: 0;
+  position: absolute;
+  z-index: 5;
+  background: url('wave.webp') no-repeat center top; /* Center the background image */
+  background-size: cover; /* Cover ensures the image fills the container */
+  overflow: hidden;
+  display: flex; /* Use flexbox to create two sections */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease;
+  opacity: 0; /* Start with invisible content */
+  width: 100%; /* Ensure it spans the width of the dropdown */
+  padding: 20px; /* Optional: add some padding for content spacing */
+}
+
+
+.dropdown-content.active {
+  max-height: 1000px; /* Adjust this value as needed */
+  opacity: 1; /* Make content visible */
+}
+
+.dropdown-section {
+  flex: 1; /* Allows sections to take up space */
+  padding: 10px;
+}
+
+.category_item img {
+  width: 540px;
+  height: 620px;
+  display: block; /* Ensure image is block-level for proper layout */
+}
+
+.download-btn {
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #01004e;
+  color: white;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for both properties */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-btn:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  background-color:  #ce9d02;  /* Change color on hover */
+  color: black;
+}
+
+.dropdown-content .dropdown-section {
+  box-sizing: border-box;
+}
+
+.dropdown-content .left {
+  flex: 1; /* Allows the image section to take up space */
+}
+
+.dropdown-content .right {
+  flex: 1; /* Allows the text and download section to take up more space */
+  display: flex;
+  margin-top: 20vh;
+  text-align: center;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.dropdown-content .right p {
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.616);
+  font-weight: 700;
+  margin-bottom: 10px; /* Space between text and button */
+  margin-right: 80px; /* Reset margin-right */
+}
+
+.dropdown-content .download-btn {
+  margin-top: 3vh; /* Remove margin-top to keep spacing consistent */
+  align-self: center; /* Center the button */
+}
+
+
+
+.category .category_item {
+  position: relative;
+  margin-bottom: 11vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  background-size: cover; /* Cover ensures the image scales */
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+
